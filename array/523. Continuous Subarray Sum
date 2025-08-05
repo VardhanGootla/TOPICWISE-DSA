@@ -1,0 +1,15 @@
+class Solution {
+    public boolean checkSubarraySum(int[] nums, int k) {
+        for(int i=0;i<nums.length;i++){
+            int sums = nums[i];
+            for(int j=i+1;j<nums.length;j++){
+                sums += nums[j];
+                if(sums % k == 0){
+                    return true;
+                }
+            }
+          
+        }
+      return false;
+    }
+}
